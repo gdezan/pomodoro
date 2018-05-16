@@ -148,14 +148,6 @@ footer {
     font-size: 25px;
 }
 
-.tube {
-    border-radius: 8px;
-    background-color: #2E383F;
-    height: 300px;
-    width: 30px;
-    position: absolute;
-    z-index: 2;
-}
 
 .button {
     background-color: rgba(249, 169, 40, 0.527);
@@ -179,14 +171,6 @@ footer {
 
 .button:active {
     transform: scale(0.95);
-}
-
-.t-left {
-    left: -300px;
-}
-
-.t-right {
-    right: -300px;
 }
 
 
