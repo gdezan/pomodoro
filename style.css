@@ -1,13 +1,35 @@
 html {
     --fill: 0px;
+    --growcolor: rgb(249, 168, 40);
     text-align: center;
     background-color: #ECECEB;
     color: white;
     font-family: 'Inconsolata', monospace;
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
 }
 
 p {
     margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    margin-top: 50px;
+    color: rgb(14, 14, 14);
+}
+
+.title {
+    color: rgb(14, 14, 14);
+    font-size: 80px;
+    margin-top: 30px;
+    margin-bottom: -30px;
 }
 
 .clock {
@@ -17,7 +39,7 @@ p {
 }
 
 .countdown {
-    background-color: rgb(73, 89, 100);
+    background-color: rgba(100, 92, 116, 0.61);
     margin: 0px 25px;
     height: 145px;
     border-radius: 8px;
@@ -25,12 +47,18 @@ p {
 
 .timedown {
     font-size: 90px;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
 }
 
@@ -42,12 +70,18 @@ p {
 }
 
 .ctl {
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
     background-color: rgba(249, 169, 40, 0.527);
     border-radius: 8px;
@@ -60,6 +94,7 @@ p {
 
 .ctl:hover {
     background-color: rgb(249, 169, 40);
+    cursor: pointer;
 }
 
 .ctl:active {
@@ -72,23 +107,37 @@ p {
     width: 450px;
     height: 300px;
     transform: translateX(-50%);
-    z-index: 5;
+    z-index: 2;
     background-color: #2E383F;
     font-size: 18px;
 }
 
+.grow {
+    background-color: var(--growcolor);
+    height: var(--fill);
+    width: 450px;
+    position: absolute;
+    border-radius: 8px;
+    transform: translateX(-50%);
+    z-index: -1;
+    transform: scaleX(0.95);
+    bottom: 10px;
+    transition: height 1s linear;
+}
+
+
 .options {
     display: flex;
     justify-content: center;
+    z-index: 4;
 }
 
 .length {
-    background-color: rgb(73, 89, 100);
+    background-color: rgba(100, 92, 116, 0.61);
     padding: 15px 30px;
     margin: 20px 10px;
     border-radius: 8px;
     width: 130px;
-
 }
 
 .increment {
@@ -125,6 +174,7 @@ p {
 
 .button:hover {
     background-color: rgb(249, 169, 40);
+    cursor: pointer;
 }
 
 .button:active {
@@ -139,17 +189,6 @@ p {
     right: -300px;
 }
 
-.t-grow {
-    background-color: rgb(249, 168, 40);
-    height: var(--fill);
-    width: 30px;
-    position: absolute;
-    border-radius: 5px;
-    z-index: 3;
-    transform: scaleX(0.70);
-    bottom: -295px;
-    transition: height 1s linear;
-}
 
 .timeframe {
     color: rgb(14, 14, 14);
@@ -164,7 +203,6 @@ p {
     .tube {
         visibility: hidden;
     }
-
     .t-grow {
         visibility: hidden;
     }
