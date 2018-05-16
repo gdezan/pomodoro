@@ -1,0 +1,171 @@
+html {
+    --fill: 0px;
+    text-align: center;
+    background-color: #ECECEB;
+    color: white;
+    font-family: 'Inconsolata', monospace;
+}
+
+p {
+    margin: 0;
+}
+
+.clock {
+    position: relative;
+    display: inline-block;
+    margin: 60px auto;
+}
+
+.countdown {
+    background-color: rgb(73, 89, 100);
+    margin: 0px 25px;
+    height: 145px;
+    border-radius: 8px;
+}
+
+.timedown {
+    font-size: 90px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.control {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.ctl {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+    background-color: rgba(249, 169, 40, 0.527);
+    border-radius: 8px;
+    width: 100px;
+    line-height: 30px;
+    margin: 0 15px;
+    height: 30px;
+    transition: background-color 0.2s;
+}
+
+.ctl:hover {
+    background-color: rgb(249, 169, 40);
+}
+
+.ctl:active {
+    transform: scale(0.95);
+}
+
+.box {
+    position: absolute;
+    border-radius: 8px;
+    width: 450px;
+    height: 300px;
+    transform: translateX(-50%);
+    z-index: 5;
+    background-color: #2E383F;
+    font-size: 18px;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+}
+
+.length {
+    background-color: rgb(73, 89, 100);
+    padding: 15px 30px;
+    margin: 20px 10px;
+    border-radius: 8px;
+    width: 130px;
+
+}
+
+.increment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+.tube {
+    border-radius: 8px;
+    background-color: #2E383F;
+    height: 300px;
+    width: 30px;
+    position: absolute;
+    z-index: 2;
+}
+
+.button {
+    background-color: rgba(249, 169, 40, 0.527);
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+    margin: 0 12px;
+}
+
+.time {
+    line-height: 30px;
+}
+
+.button:hover {
+    background-color: rgb(249, 169, 40);
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+.t-left {
+    left: -300px;
+}
+
+.t-right {
+    right: -300px;
+}
+
+.t-grow {
+    background-color: rgb(249, 168, 40);
+    height: var(--fill);
+    width: 30px;
+    position: absolute;
+    border-radius: 5px;
+    z-index: 3;
+    transform: scaleX(0.70);
+    bottom: -295px;
+    transition: height 1s linear;
+}
+
+.timeframe {
+    color: rgb(14, 14, 14);
+    margin-top: 250px;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+/* For Smaller Screens */
+
+@media (max-width: 550px) {
+    .tube {
+        visibility: hidden;
+    }
+
+    .t-grow {
+        visibility: hidden;
+    }
+}
